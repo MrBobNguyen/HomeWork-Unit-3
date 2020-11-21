@@ -1,11 +1,16 @@
 //All Characters String
 var SpecChar = " !\"#$%&\'()*+,-.\/:;<=>?@[\\]^_`{|}~" ;
 var LowChar = "abcdefghijklmnopqrstuvwxyz";
-var UpChar = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+var UpChar = LowChar.toUpperCase();
 var NumChar = "0123456789";
 var MixedChar = SpecChar + LowChar + UpChar + NumChar;
 
-
+//String to Array
+var SpecCharArr = SpecChar.split("");
+var LowCharArr = LowChar.split("");
+var UpCharArr = UpChar.split("");
+var NumCharArr = NumChar.split("");
+var MixedCharArr = MixedChar.split("");
 
 
 //Main Code Generator
