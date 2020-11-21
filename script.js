@@ -58,10 +58,13 @@ function generatePassword()
     Content: ""
   }
   console.log(MixedChar);
-  AskCritia(UpChar, MixedChar, password); console.log(password);
-  AskCritia(LowChar, MixedChar, password); console.log(password);
-  AskCritia(NumChar, MixedChar, password); console.log(password);
-  AskCritia(SpecChar, MixedChar, password); console.log(password);
+  do{
+    alert("Please Choose your critia")
+    AskCritia(UpChar, MixedChar, password); console.log(password);
+    AskCritia(LowChar, MixedChar, password); console.log(password);
+    AskCritia(NumChar, MixedChar, password); console.log(password);
+    AskCritia(SpecChar, MixedChar, password); console.log(password);
+  } while(password.Content === "" );
   do{
     var inputLength = prompt ("Enter the LENGTH for your password: (8 to 128)")  
     password.Length = parseInt(inputLength);
@@ -72,6 +75,11 @@ function generatePassword()
   while (password.Content.length < password.Length){
     AddRandomOneChar(MixedChar.Content, password)
   }
+  console.log(password.Content)
+  
+
+
+
   //Mix for final password
   var realpassword ="";
   while (password.Content.length > 0)
