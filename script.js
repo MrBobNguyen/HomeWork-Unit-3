@@ -63,9 +63,12 @@ function generatePassword()
   AskCritia(NumChar, MixedChar, password); console.log(password);
   AskCritia(SpecChar, MixedChar, password); console.log(password);
   do{
-    password.Length = prompt ("Enter the LENGTH for your password: (8 to 128)")  
-  } while ((password.Length<8) || (password.Length>128));
-  
+    var inputLength = prompt ("Enter the LENGTH for your password: (8 to 128)")  
+    password.Length = parseInt(inputLength);
+
+  } while ((password.Length<8) || (password.Length>128) || (isNaN(password.Length)));
+  console.log(password.Length)
+
   while (password.Content.length < password.Length){
     AddRandomOneChar(MixedChar.Content, password)
   }
